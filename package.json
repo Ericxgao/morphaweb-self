@@ -42,6 +42,6 @@
     "jszip": "^3.7.1",
     "lodash": "^4.17.21",
     "wavefile": "^11.0.0",
-    "wavesurfer.js": "^6.6"
+    "wavesurfer.js": "^7.9"
   }
 }

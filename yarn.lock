@@ -29,15 +29,15 @@
   resolved "https://registry.npmjs.org/@lmdb/lmdb-darwin-x64/-/lmdb-darwin-x64-2.8.5.tgz"
   integrity sha512-w/sLhN4T7MW1nB3R/U8WK5BgQLz904wh+/SmA2jD8NnF7BLLoUgflCNxOeSPOWp8geP6nP/+VjWzZVip7rZ1ug==
 
-"@lmdb/lmdb-linux-arm@2.8.5":
-  version "2.8.5"
-  resolved "https://registry.npmjs.org/@lmdb/lmdb-linux-arm/-/lmdb-linux-arm-2.8.5.tgz"
-  integrity sha512-c0TGMbm2M55pwTDIfkDLB6BpIsgxV4PjYck2HiOX+cy/JWiBXz32lYbarPqejKs9Flm7YVAKSILUducU9g2RVg==
-
 "@lmdb/lmdb-linux-arm64@2.8.5":
   version "2.8.5"
   resolved "https://registry.npmjs.org/@lmdb/lmdb-linux-arm64/-/lmdb-linux-arm64-2.8.5.tgz"
   integrity sha512-vtbZRHH5UDlL01TT5jB576Zox3+hdyogvpcbvVJlmU5PdL3c5V7cj1EODdh1CHPksRl+cws/58ugEHi8bcj4Ww==
+
+"@lmdb/lmdb-linux-arm@2.8.5":
+  version "2.8.5"
+  resolved "https://registry.npmjs.org/@lmdb/lmdb-linux-arm/-/lmdb-linux-arm-2.8.5.tgz"
+  integrity sha512-c0TGMbm2M55pwTDIfkDLB6BpIsgxV4PjYck2HiOX+cy/JWiBXz32lYbarPqejKs9Flm7YVAKSILUducU9g2RVg==
 
 "@lmdb/lmdb-linux-x64@2.8.5":
   version "2.8.5"
@@ -68,15 +68,15 @@
   resolved "https://registry.npmjs.org/@msgpackr-extract/msgpackr-extract-darwin-x64/-/msgpackr-extract-darwin-x64-3.0.3.tgz"
   integrity sha512-mdzd3AVzYKuUmiWOQ8GNhl64/IoFGol569zNRdkLReh6LRLHOXxU4U8eq0JwaD8iFHdVGqSy4IjFL4reoWCDFw==
 
-"@msgpackr-extract/msgpackr-extract-linux-arm@3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@msgpackr-extract/msgpackr-extract-linux-arm/-/msgpackr-extract-linux-arm-3.0.3.tgz"
-  integrity sha512-fg0uy/dG/nZEXfYilKoRe7yALaNmHoYeIoJuJ7KJ+YyU2bvY8vPv27f7UKhGRpY6euFYqEVhxCFZgAUNQBM3nw==
-
 "@msgpackr-extract/msgpackr-extract-linux-arm64@3.0.3":
   version "3.0.3"
   resolved "https://registry.npmjs.org/@msgpackr-extract/msgpackr-extract-linux-arm64/-/msgpackr-extract-linux-arm64-3.0.3.tgz"
   integrity sha512-YxQL+ax0XqBJDZiKimS2XQaf+2wDGVa1enVRGzEvLLVFeqa5kx2bWbtcSXgsxjQB7nRqqIGFIcLteF/sHeVtQg==
+
+"@msgpackr-extract/msgpackr-extract-linux-arm@3.0.3":
+  version "3.0.3"
+  resolved "https://registry.npmjs.org/@msgpackr-extract/msgpackr-extract-linux-arm/-/msgpackr-extract-linux-arm-3.0.3.tgz"
+  integrity sha512-fg0uy/dG/nZEXfYilKoRe7yALaNmHoYeIoJuJ7KJ+YyU2bvY8vPv27f7UKhGRpY6euFYqEVhxCFZgAUNQBM3nw==
 
 "@msgpackr-extract/msgpackr-extract-linux-x64@3.0.3":
   version "3.0.3"
@@ -96,7 +96,7 @@
     "@nodelib/fs.stat" "2.0.5"
     run-parallel "^1.1.9"
 
-"@nodelib/fs.stat@^2.0.2", "@nodelib/fs.stat@2.0.5":
+"@nodelib/fs.stat@2.0.5", "@nodelib/fs.stat@^2.0.2":
   version "2.0.5"
   resolved "https://registry.npmjs.org/@nodelib/fs.stat/-/fs.stat-2.0.5.tgz"
   integrity sha512-RkhPPp2zrqDAQA/2jNhnztcPAlv64XdhIp7a7454A5ovI7Bukxgt7MX7udwAu3zg1DcpPU0rz3VV1SeaqvY4+A==
@@ -135,6 +135,13 @@
   version "2.15.2"
   resolved "https://registry.npmjs.org/@parcel/codeframe/-/codeframe-2.15.2.tgz"
   integrity sha512-uzcHUXBXV+vUqXE7SR6Et60GauPGTWvc381pVzCzc90VQJyWY/xyRRIgcA+4MLi2+lQj+w4Uq9H9qg+hMx/JFg==
+  dependencies:
+    chalk "^4.1.2"
+
+"@parcel/codeframe@2.15.4":
+  version "2.15.4"
+  resolved "https://registry.yarnpkg.com/@parcel/codeframe/-/codeframe-2.15.4.tgz#69f00eea86313c5bc5cbe145607ae248803c32be"
+  integrity sha512-ErAPEQaJIpB+ocNZ3rl8AEK6piA7JBInwZLNU0eHMthm01Ssb10JkpAadyn1w9IVfCey+kqQcEeWv47Yh6mL1Q==
   dependencies:
     chalk "^4.1.2"
 
@@ -183,7 +190,7 @@
     "@parcel/transformer-react-refresh-wrap" "2.15.2"
     "@parcel/transformer-svg" "2.15.2"
 
-"@parcel/core@^2.15.2", "@parcel/core@2.15.2":
+"@parcel/core@2.15.2":
   version "2.15.2"
   resolved "https://registry.npmjs.org/@parcel/core/-/core-2.15.2.tgz"
   integrity sha512-yIFtxeLPLbTkpNuXGmnBX1U51unxv+gRoH/I5IcyD/vRL2Kp/cQU6YJWTSGK5sWG1Fgo+1Z2DeYp914Yd4a1WQ==
@@ -222,6 +229,14 @@
     "@mischnic/json-sourcemap" "^0.1.1"
     nullthrows "^1.1.1"
 
+"@parcel/diagnostic@2.15.4":
+  version "2.15.4"
+  resolved "https://registry.yarnpkg.com/@parcel/diagnostic/-/diagnostic-2.15.4.tgz#17393f0fa71da19c84d0668e496e4ca9427e1f77"
+  integrity sha512-8MAqefwzBKceNN3364OLm+p4HRD7AfimfFW3MntLxPB6bnelc9UBg5c9zEm34zYEctbmky8gqYgAUSDjqYC5Hw==
+  dependencies:
+    "@mischnic/json-sourcemap" "^0.1.1"
+    nullthrows "^1.1.1"
+
 "@parcel/error-overlay@2.15.2":
   version "2.15.2"
   resolved "https://registry.npmjs.org/@parcel/error-overlay/-/error-overlay-2.15.2.tgz"
@@ -232,10 +247,20 @@
   resolved "https://registry.npmjs.org/@parcel/events/-/events-2.15.2.tgz"
   integrity sha512-CxXVuYz/K3sDIquM+3Pemxhppb8Q/mRayxqxZtXHoKbhiLBeyX+pLz2v9Hr0R7fiN6naV00IG48Zc5aArHXR4w==
 
+"@parcel/events@2.15.4":
+  version "2.15.4"
+  resolved "https://registry.yarnpkg.com/@parcel/events/-/events-2.15.4.tgz#2a08fb358cff6888bc5151b1aece56671990681d"
+  integrity sha512-SBq4zstaFr7XQaXNaQmUuVh1swCUHrhtPCOSofvkJoQGhjsuhQlh4t0NmUikyKNdj7C1j40xCS1kGHuUO29b0g==
+
 "@parcel/feature-flags@2.15.2":
   version "2.15.2"
   resolved "https://registry.npmjs.org/@parcel/feature-flags/-/feature-flags-2.15.2.tgz"
   integrity sha512-6oiuLd3ypk4GY8X9/l/GrngzSddHW8yF8DrYA++TkaPDtTz4llanza/p7RIk/ltdV3hmBxnH4vjWtciJEcbQww==
+
+"@parcel/feature-flags@2.15.4":
+  version "2.15.4"
+  resolved "https://registry.yarnpkg.com/@parcel/feature-flags/-/feature-flags-2.15.4.tgz#07646d16668835977648999ebdedaa108b3ad722"
+  integrity sha512-DJqZVtbfjWJseM0gk7yyDkAuOhP7/FVwZ/YVqjozIqXBhmQm07xctiqNQyZX2vBbQsxmVbjpqyq+DOj45WPEzQ==
 
 "@parcel/fs@2.15.2":
   version "2.15.2"
@@ -265,10 +290,25 @@
     "@parcel/diagnostic" "2.15.2"
     "@parcel/events" "2.15.2"
 
+"@parcel/logger@2.15.4":
+  version "2.15.4"
+  resolved "https://registry.yarnpkg.com/@parcel/logger/-/logger-2.15.4.tgz#a3a4452167db5ead13942bc1dd0b783ab5a11de9"
+  integrity sha512-rQ7F5+FMQ7t+w5NGFRT8CWHhym0aunduufCjlafvRzUSKEN/5/nwTfCe9I5QsthGlXJWs+ZTy4zQ+wLtZQRBKQ==
+  dependencies:
+    "@parcel/diagnostic" "2.15.4"
+    "@parcel/events" "2.15.4"
+
 "@parcel/markdown-ansi@2.15.2":
   version "2.15.2"
   resolved "https://registry.npmjs.org/@parcel/markdown-ansi/-/markdown-ansi-2.15.2.tgz"
   integrity sha512-qioxe3Gw/khhrZXeF3tmJeChoq70prxGqVhJylsnGimxHbxjLo3i8Jo8Thi36GiGcOTYSeyF/2tMo9BW2t2vqA==
+  dependencies:
+    chalk "^4.1.2"
+
+"@parcel/markdown-ansi@2.15.4":
+  version "2.15.4"
+  resolved "https://registry.yarnpkg.com/@parcel/markdown-ansi/-/markdown-ansi-2.15.4.tgz#21e9119854dd7f07289eabc514ba1d2b939762f0"
+  integrity sha512-u5Lwcr4ZVBSLFbKYht+mJqJ3ZMXvJdmDMU5eDtrIEKPpu9LrIDdPpDEXBoyO6pDsoV/2AqyXUUMzBRyCatkkoQ==
   dependencies:
     chalk "^4.1.2"
 
@@ -430,6 +470,13 @@
   dependencies:
     "@parcel/types" "2.15.2"
 
+"@parcel/plugin@2.15.4":
+  version "2.15.4"
+  resolved "https://registry.yarnpkg.com/@parcel/plugin/-/plugin-2.15.4.tgz#742c08846d7c0ab174f040beac28c86c460e6220"
+  integrity sha512-XVehjmzk8ZDOFf/BXo26L76ZqCGNKIQcN2ngxAnq0KRY/WFanL8yLaL0qQq+c9whlu09hkGz1CuhFBLAIjJMYQ==
+  dependencies:
+    "@parcel/types" "2.15.4"
+
 "@parcel/profiler@2.15.2":
   version "2.15.2"
   resolved "https://registry.npmjs.org/@parcel/profiler/-/profiler-2.15.2.tgz"
@@ -438,6 +485,16 @@
     "@parcel/diagnostic" "2.15.2"
     "@parcel/events" "2.15.2"
     "@parcel/types-internal" "2.15.2"
+    chrome-trace-event "^1.0.2"
+
+"@parcel/profiler@2.15.4":
+  version "2.15.4"
+  resolved "https://registry.yarnpkg.com/@parcel/profiler/-/profiler-2.15.4.tgz#aea16630151fef60edb9db1a34c840a9123cf262"
+  integrity sha512-ezVZlttUmQ1MQD5e8yVb07vSGYEFOB59Y/jaxL9mGSLZkVhMIIHe/7SuA+4qVAH8dlg6bslXRqlsunLMPEgPsg==
+  dependencies:
+    "@parcel/diagnostic" "2.15.4"
+    "@parcel/events" "2.15.4"
+    "@parcel/types-internal" "2.15.4"
     chrome-trace-event "^1.0.2"
 
 "@parcel/reporter-cli@2.15.2":
@@ -521,40 +578,80 @@
   resolved "https://registry.npmjs.org/@parcel/rust-darwin-arm64/-/rust-darwin-arm64-2.15.2.tgz"
   integrity sha512-IK5mo/7bNym1ODMWD92D2URGcAq2K/9BasRlfjWI/Gh74l3lH4EFadUfgM88L+MVCV3WTg8ht5ZA0Iyp+IQ1JQ==
 
+"@parcel/rust-darwin-arm64@2.15.4":
+  version "2.15.4"
+  resolved "https://registry.yarnpkg.com/@parcel/rust-darwin-arm64/-/rust-darwin-arm64-2.15.4.tgz#8716edcee0176394781cff6917f5cd9def77cb0f"
+  integrity sha512-cEpNDeEtvM5Nhj0QLN95QbcZ9yY6Z5W3+2OeHvnojEAP8Rp1XGzqVTTZdlyKyN1KTiyfzIOiQJCiEcr+kMc5Nw==
+
 "@parcel/rust-darwin-x64@2.15.2":
   version "2.15.2"
   resolved "https://registry.npmjs.org/@parcel/rust-darwin-x64/-/rust-darwin-x64-2.15.2.tgz"
   integrity sha512-J30ukJXCzXsYNlYvYsaPEAEzfCZGXVIkXtPSVpWPwcaReqFUyT2bm4I8DHoeas0JwMNaeNlJhksaJA/iomqlwA==
+
+"@parcel/rust-darwin-x64@2.15.4":
+  version "2.15.4"
+  resolved "https://registry.yarnpkg.com/@parcel/rust-darwin-x64/-/rust-darwin-x64-2.15.4.tgz#1556299e41cd3bd67391c613a892f0f5812a454a"
+  integrity sha512-jL9i13sXKeBXXz8Z3BNYoScPOi+ljBA0ubAE3PN5DCoAA6wS4/FsAiRSIUw+3uxqASBD7+JvaT5sDUga1Xft5g==
 
 "@parcel/rust-linux-arm-gnueabihf@2.15.2":
   version "2.15.2"
   resolved "https://registry.npmjs.org/@parcel/rust-linux-arm-gnueabihf/-/rust-linux-arm-gnueabihf-2.15.2.tgz"
   integrity sha512-WpPddkviw8IkRRnT/dRyD3Uzvy6Yuoy5vvtDmpnrR2bJnEz5uQI3TlhMtQo7R+j6aIrDsGFJKBeo9Z0ga0ebNQ==
 
+"@parcel/rust-linux-arm-gnueabihf@2.15.4":
+  version "2.15.4"
+  resolved "https://registry.yarnpkg.com/@parcel/rust-linux-arm-gnueabihf/-/rust-linux-arm-gnueabihf-2.15.4.tgz#514e3c7ae6b1eaca91a345ef5c705e95458f41ea"
+  integrity sha512-c8HpVdDugCutlMILoOlkTioih9HGJpQrzS2G3cg/O1a5ZTacooGf3eGJGoh6dUBEv9WEaEb6zsTRwFv2BgtZcA==
+
 "@parcel/rust-linux-arm64-gnu@2.15.2":
   version "2.15.2"
   resolved "https://registry.npmjs.org/@parcel/rust-linux-arm64-gnu/-/rust-linux-arm64-gnu-2.15.2.tgz"
   integrity sha512-RzD7Gw0QqyUoWaVrtCU+v5J5pg6bybVNknqlEY4jfcJDgJHsM1V91DwJwxnI4ikG/uMedl0I40dl59x/Vo01Ow==
+
+"@parcel/rust-linux-arm64-gnu@2.15.4":
+  version "2.15.4"
+  resolved "https://registry.yarnpkg.com/@parcel/rust-linux-arm64-gnu/-/rust-linux-arm64-gnu-2.15.4.tgz#78aaf9aa9be92a764eb76d013c580679eb12b44e"
+  integrity sha512-Wcfs/JY4FnuLxQaU+VX2rI4j376Qo2LkZmq4zp9frnsajaAqmloVQfnbUkdnQPEL4I38eHXerzBX3LoXSxnZKA==
 
 "@parcel/rust-linux-arm64-musl@2.15.2":
   version "2.15.2"
   resolved "https://registry.npmjs.org/@parcel/rust-linux-arm64-musl/-/rust-linux-arm64-musl-2.15.2.tgz"
   integrity sha512-mWoL7kCITrEOO0GQ+LqGUylX+6b3nsV60Lzrz2N0Pgzz3EbGS0d4gDKkjxpi6BoR+h4KL7nLhj4hhbm0OHIc4A==
 
+"@parcel/rust-linux-arm64-musl@2.15.4":
+  version "2.15.4"
+  resolved "https://registry.yarnpkg.com/@parcel/rust-linux-arm64-musl/-/rust-linux-arm64-musl-2.15.4.tgz#c6d2cde97139d5329288cb44325534fe12a66659"
+  integrity sha512-xf9HxosEn3dU5M0zDSXqBaG8rEjLThRdTYqpkxHW/qQGzy0Se+/ntg8PeDHsSG5E9OK8xrcKH46Lhaw0QBF/Zw==
+
 "@parcel/rust-linux-x64-gnu@2.15.2":
   version "2.15.2"
   resolved "https://registry.npmjs.org/@parcel/rust-linux-x64-gnu/-/rust-linux-x64-gnu-2.15.2.tgz"
   integrity sha512-aI8bKZTEZNYmgURiAfrgpmaoEArnMRvosfsOKnGykTjmHgsBxO/CGguFj5a4wlAZTVWcTGfs4krnUKtF9Hw6Rw==
+
+"@parcel/rust-linux-x64-gnu@2.15.4":
+  version "2.15.4"
+  resolved "https://registry.yarnpkg.com/@parcel/rust-linux-x64-gnu/-/rust-linux-x64-gnu-2.15.4.tgz#476cbb6544117abca7e6f1b3c84737f2ad7182b4"
+  integrity sha512-RigXVCFj6h0AXmkuxU61rfgYuW+PXBR6qSkR2I20yKnAXoMfxLaZy9YJ3sAPMEjT9zXgzGAX+3syItMF+bRjaw==
 
 "@parcel/rust-linux-x64-musl@2.15.2":
   version "2.15.2"
   resolved "https://registry.npmjs.org/@parcel/rust-linux-x64-musl/-/rust-linux-x64-musl-2.15.2.tgz"
   integrity sha512-FpQOraPTjGfbHipjdbYpQLlMIRDoVL+Kl9ak+6mt0SbvP3QaXGosQXyhw0ZoNszqVLjIwC0OHEjAHdtcO6ZUvQ==
 
+"@parcel/rust-linux-x64-musl@2.15.4":
+  version "2.15.4"
+  resolved "https://registry.yarnpkg.com/@parcel/rust-linux-x64-musl/-/rust-linux-x64-musl-2.15.4.tgz#76b62af4f6d7539f2d6dcaf0e0b84e76065116e2"
+  integrity sha512-tHlRgonSr5ca8OvhbGzZUggCgCOirRz5dHhPSCm4ajMxeDMamwprq6lKy0sCNTXht4TXIEyugBcfEuRKEeVIBw==
+
 "@parcel/rust-win32-x64-msvc@2.15.2":
   version "2.15.2"
   resolved "https://registry.npmjs.org/@parcel/rust-win32-x64-msvc/-/rust-win32-x64-msvc-2.15.2.tgz"
   integrity sha512-aSXkPc+KYAT6MnYgw2urXuDvipPkD90uJBKtSn3MY+fGOfzEluK7j0F5NdH88oTzrGVhRQxnxfe3Fc+IRhsaFQ==
+
+"@parcel/rust-win32-x64-msvc@2.15.4":
+  version "2.15.4"
+  resolved "https://registry.yarnpkg.com/@parcel/rust-win32-x64-msvc/-/rust-win32-x64-msvc-2.15.4.tgz#f64fade58dffe390754acc641a1a65950104a22e"
+  integrity sha512-YsX6vMl/bfyxqZSN7yiaZQKLoJKELSZYcvg8gIv4CF1xkaTdmfr6gvq2iCyoV+bwrodNohN4Xfl8r7Wniu1/UA==
 
 "@parcel/rust@2.15.2":
   version "2.15.2"
@@ -569,6 +666,20 @@
     "@parcel/rust-linux-x64-gnu" "2.15.2"
     "@parcel/rust-linux-x64-musl" "2.15.2"
     "@parcel/rust-win32-x64-msvc" "2.15.2"
+
+"@parcel/rust@2.15.4":
+  version "2.15.4"
+  resolved "https://registry.yarnpkg.com/@parcel/rust/-/rust-2.15.4.tgz#2e6759c490869704e15466697786dd05fe7eba1c"
+  integrity sha512-OxOux8z8YEYg23+15uMmYaloFp3x1RwcliBay6HqxUW7RTmtI1/z+xd8AtienCckACD60gvDGy04LjgbEGdJVg==
+  optionalDependencies:
+    "@parcel/rust-darwin-arm64" "2.15.4"
+    "@parcel/rust-darwin-x64" "2.15.4"
+    "@parcel/rust-linux-arm-gnueabihf" "2.15.4"
+    "@parcel/rust-linux-arm64-gnu" "2.15.4"
+    "@parcel/rust-linux-arm64-musl" "2.15.4"
+    "@parcel/rust-linux-x64-gnu" "2.15.4"
+    "@parcel/rust-linux-x64-musl" "2.15.4"
+    "@parcel/rust-win32-x64-msvc" "2.15.4"
 
 "@parcel/source-map@^2.1.1":
   version "2.1.1"
@@ -623,12 +734,12 @@
     "@parcel/workers" "2.15.2"
     nullthrows "^1.1.1"
 
-"@parcel/transformer-inline-string@2.15.2":
-  version "2.15.2"
-  resolved "https://registry.npmjs.org/@parcel/transformer-inline-string/-/transformer-inline-string-2.15.2.tgz"
-  integrity sha512-Fofl88Hc0fctjhAP5PuX6DnVAZ15Z+d/QE25P4A4ITwUeBl58KVUXnZutn63ksnvnTLKf3P5bJ+3fe+PNg0aBA==
+"@parcel/transformer-inline-string@2.15.4":
+  version "2.15.4"
+  resolved "https://registry.yarnpkg.com/@parcel/transformer-inline-string/-/transformer-inline-string-2.15.4.tgz#5043feb5fdc4ffb26c097b0b5aa0600571959cdc"
+  integrity sha512-gXxV+bR3WtZ57E3qi0tFTRUEvT0U84OuI6PcL7ufrCSgZ3S/a4K2ZSw7DMuXvcL2KLh3FOVi/9O/Qp+X1qwk9g==
   dependencies:
-    "@parcel/plugin" "2.15.2"
+    "@parcel/plugin" "2.15.4"
 
 "@parcel/transformer-js@2.15.2":
   version "2.15.2"
@@ -720,6 +831,16 @@
     "@parcel/source-map" "^2.1.1"
     utility-types "^3.11.0"
 
+"@parcel/types-internal@2.15.4":
+  version "2.15.4"
+  resolved "https://registry.yarnpkg.com/@parcel/types-internal/-/types-internal-2.15.4.tgz#50b192656a2b2b3d9e01d764038101218bd0ae6b"
+  integrity sha512-kl5QEZ8PTWRvMkwmk7IG3VpP/5/MSGwt9Nrj9ctXLdZkDdXZpK7IbXAthLQ4zrByMaqZULL2IyDuBqBgfuAqlQ==
+  dependencies:
+    "@parcel/diagnostic" "2.15.4"
+    "@parcel/feature-flags" "2.15.4"
+    "@parcel/source-map" "^2.1.1"
+    utility-types "^3.11.0"
+
 "@parcel/types@2.15.2":
   version "2.15.2"
   resolved "https://registry.npmjs.org/@parcel/types/-/types-2.15.2.tgz"
@@ -727,6 +848,14 @@
   dependencies:
     "@parcel/types-internal" "2.15.2"
     "@parcel/workers" "2.15.2"
+
+"@parcel/types@2.15.4":
+  version "2.15.4"
+  resolved "https://registry.yarnpkg.com/@parcel/types/-/types-2.15.4.tgz#736a42f81c3f3e3bd1ab7e3c374c123d60ec05fa"
+  integrity sha512-fS3UMMinLtzn/NTSx/qx38saBgRniylldh0XZEUcGeME4D2Llu/QlLv+YZ/LJqrFci3fPRM+YAn2K+JT/u+/0w==
+  dependencies:
+    "@parcel/types-internal" "2.15.4"
+    "@parcel/workers" "2.15.4"
 
 "@parcel/utils@2.15.2":
   version "2.15.2"
@@ -738,6 +867,20 @@
     "@parcel/logger" "2.15.2"
     "@parcel/markdown-ansi" "2.15.2"
     "@parcel/rust" "2.15.2"
+    "@parcel/source-map" "^2.1.1"
+    chalk "^4.1.2"
+    nullthrows "^1.1.1"
+
+"@parcel/utils@2.15.4":
+  version "2.15.4"
+  resolved "https://registry.yarnpkg.com/@parcel/utils/-/utils-2.15.4.tgz#5471ac633a202aa5861b80eae5d917065ed86465"
+  integrity sha512-29m09sfPx0GHnmy1kkZ5XezprepdFGKKKUEJkyiYA4ERf55jjdnU2/GP4sWlZXxjh2Y+JFoCAFlCamEClq/8eA==
+  dependencies:
+    "@parcel/codeframe" "2.15.4"
+    "@parcel/diagnostic" "2.15.4"
+    "@parcel/logger" "2.15.4"
+    "@parcel/markdown-ansi" "2.15.4"
+    "@parcel/rust" "2.15.4"
     "@parcel/source-map" "^2.1.1"
     chalk "^4.1.2"
     nullthrows "^1.1.1"
@@ -837,6 +980,18 @@
     "@parcel/utils" "2.15.2"
     nullthrows "^1.1.1"
 
+"@parcel/workers@2.15.4":
+  version "2.15.4"
+  resolved "https://registry.yarnpkg.com/@parcel/workers/-/workers-2.15.4.tgz#e4a3897e2a730a709d5dab53d75a578d4dc9542b"
+  integrity sha512-wZ/5/mfjs5aeqhXY0c6fwuaBFeNpOXoOq2CKPSMDXt+GX2u/9/1bpVxN9XeGTAJO+ZD++CLq0hyzTnIHy58nyw==
+  dependencies:
+    "@parcel/diagnostic" "2.15.4"
+    "@parcel/logger" "2.15.4"
+    "@parcel/profiler" "2.15.4"
+    "@parcel/types-internal" "2.15.4"
+    "@parcel/utils" "2.15.4"
+    nullthrows "^1.1.1"
+
 "@swc/core-darwin-arm64@1.11.29":
   version "1.11.29"
   resolved "https://registry.npmjs.org/@swc/core-darwin-arm64/-/core-darwin-arm64-1.11.29.tgz"
@@ -911,7 +1066,7 @@
   resolved "https://registry.npmjs.org/@swc/counter/-/counter-0.1.3.tgz"
   integrity sha512-e2BR4lsJkkRlKZ/qCHPw9ZaSxc0MVUd7gtbtaB7aMvHeJVYe8sOB8DBZkP2DtISHGSku9sCK6T6cnY0CtXrOCQ==
 
-"@swc/helpers@^0.5.0", "@swc/helpers@>=0.5.17":
+"@swc/helpers@^0.5.0":
   version "0.5.17"
   resolved "https://registry.npmjs.org/@swc/helpers/-/helpers-0.5.17.tgz"
   integrity sha512-5IKx/Y13RsYd+sauPb2x+U/xZikHjolzfuDgTAl/Tdf3Q8rslRvC19NKDLgAJQ6wsqADk10ntlv08nPFw/gO/A==
@@ -975,17 +1130,7 @@ base64-js@^1.3.1:
   resolved "https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz"
   integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
 
-bn.js@^4.0.0:
-  version "4.12.2"
-  resolved "https://registry.npmjs.org/bn.js/-/bn.js-4.12.2.tgz"
-  integrity sha512-n4DSx829VRTRByMRGdjQ9iqsN0Bh4OolPsFnaZBLcbi8iXcB+kJ9s7EnRt4wILZNV3kPLHkRVfOc/HvhC3ovDw==
-
-bn.js@^4.1.0:
-  version "4.12.2"
-  resolved "https://registry.npmjs.org/bn.js/-/bn.js-4.12.2.tgz"
-  integrity sha512-n4DSx829VRTRByMRGdjQ9iqsN0Bh4OolPsFnaZBLcbi8iXcB+kJ9s7EnRt4wILZNV3kPLHkRVfOc/HvhC3ovDw==
-
-bn.js@^4.11.9:
+bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.11.9:
   version "4.12.2"
   resolved "https://registry.npmjs.org/bn.js/-/bn.js-4.12.2.tgz"
   integrity sha512-n4DSx829VRTRByMRGdjQ9iqsN0Bh4OolPsFnaZBLcbi8iXcB+kJ9s7EnRt4wILZNV3kPLHkRVfOc/HvhC3ovDw==
@@ -1063,7 +1208,7 @@ browserify-sign@^4.2.3:
     readable-stream "^2.3.8"
     safe-buffer "^5.2.1"
 
-browserslist@^4.24.4, browserslist@^4.24.5, "browserslist@>= 4.21.0":
+browserslist@^4.24.4, browserslist@^4.24.5:
   version "4.25.0"
   resolved "https://registry.npmjs.org/browserslist/-/browserslist-4.25.0.tgz"
   integrity sha512-PJ8gYKeS5e/whHBh8xrwYK+dAvEj7JXtz6uTucnMRB8OiGTsKccFekoRrjajPBHV8oOY+2tI4uxeceSimKwMFA==
@@ -1216,12 +1361,7 @@ detect-libc@^1.0.3:
   resolved "https://registry.npmjs.org/detect-libc/-/detect-libc-1.0.3.tgz"
   integrity sha512-pGjwhsmsp4kL2RTz08wcOlGN83otlqHeD/Z5T8GXZB+/YcpQ/dgo+lbU8ZsGxV0HIvqqxo9l7mqYwyYMD9bKDg==
 
-detect-libc@^2.0.1:
-  version "2.0.4"
-  resolved "https://registry.npmjs.org/detect-libc/-/detect-libc-2.0.4.tgz"
-  integrity sha512-3UDv+G9CsCKO1WKMGw9fwq/SWJYbI0c5Y7LU1AXYoDdbhE2AHQ6N6Nb34sG8Fj7T5APy8qXDCKuuIHd1BR0tVA==
-
-detect-libc@^2.0.3:
+detect-libc@^2.0.1, detect-libc@^2.0.3:
   version "2.0.4"
   resolved "https://registry.npmjs.org/detect-libc/-/detect-libc-2.0.4.tgz"
   integrity sha512-3UDv+G9CsCKO1WKMGw9fwq/SWJYbI0c5Y7LU1AXYoDdbhE2AHQ6N6Nb34sG8Fj7T5APy8qXDCKuuIHd1BR0tVA==
@@ -1700,11 +1840,6 @@ msgpackr@^1.11.2, msgpackr@^1.9.5:
   optionalDependencies:
     msgpackr-extract "^3.0.2"
 
-nanoid@^3.3.7:
-  version "3.3.11"
-  resolved "https://registry.npmjs.org/nanoid/-/nanoid-3.3.11.tgz"
-  integrity sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==
-
 node-addon-api@^6.1.0:
   version "6.1.0"
   resolved "https://registry.npmjs.org/node-addon-api/-/node-addon-api-6.1.0.tgz"
@@ -1837,7 +1972,7 @@ pbkdf2@^3.1.2:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-picocolors@^1.1.0, picocolors@^1.1.1:
+picocolors@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz"
   integrity sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==
@@ -1858,15 +1993,6 @@ postcss-value-parser@^4.2.0:
   version "4.2.0"
   resolved "https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz"
   integrity sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==
-
-postcss@^8.1.0:
-  version "8.4.47"
-  resolved "https://registry.npmjs.org/postcss/-/postcss-8.4.47.tgz"
-  integrity sha512-56rxCq7G/XfB4EkXq9Egn5GCqugWvDFjafDOThIdMBsI15iqPqR5r15TfSr1YPYeEI19YeaXMCbY6u88Y76GLQ==
-  dependencies:
-    nanoid "^3.3.7"
-    picocolors "^1.1.0"
-    source-map-js "^1.2.1"
 
 prettier@^3.5.3:
   version "3.5.3"
@@ -2004,11 +2130,6 @@ slash@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/slash/-/slash-3.0.0.tgz"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
-
-source-map-js@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.1.tgz"
-  integrity sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==
 
 stream-browserify@^3.0.0:
   version "3.0.0"

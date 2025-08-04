@@ -9,7 +9,6 @@ export default class ControlsHandler {
         this.sliceCountInput = document.getElementById("slice-count")
         this.detectOnsetsButton = document.getElementById("detect-onsets")
         this.divideMarkersButton = document.getElementById("divide-markers")
-        this.exportSampleDrumButton = document.getElementById("export-sampledrum")
         
         // Initial state - disable buttons
         this.setButtonsState(true);
@@ -22,7 +21,6 @@ export default class ControlsHandler {
         this.detectOnsetsButton.addEventListener('click', this.handleOnsetDetection)
         this.divideMarkersButton.addEventListener('click', this.divideMarkersByTwo)
         this.sliceCountInput.addEventListener('input', this.validateSliceCount)
-        this.exportSampleDrumButton.addEventListener('click', this.exportSampleDrumFile)
 
         document.addEventListener('keydown', this.onKeydown.bind(this))
         this.morphaweb.wavesurfer.on('seek', this.onSeek.bind(this))

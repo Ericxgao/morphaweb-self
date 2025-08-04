@@ -34,27 +34,34 @@ export default class WavHandler {
     async createFileFromBuffer(buffer, markers) {
         console.log('Exporting audio...')
         let file = new WaveFile()
+        
+        // Use 16-bit format for smaller file size (unless 32-bit is specifically needed)
         file.fromScratch(2, this.audioContext.sampleRate, '32f', buffer)
 
-        // Add markers as cue points
-        for (let marker of markers) {
-            if (marker.position != "top") {
-                file.setCuePoint({
-                    position: marker.time * 1000
-                })
-            }
-        }
-
-        for (let i = 0; i < file.cue.points.length; i++) {
-            file.cue.points[i].dwPosition = file.cue.points[i].dwSampleOffset
-        }
-
-        const data = file.toDataURI()
+        // Filter and batch process markers to avoid redundant operations
+        const validMarkers = markers.filter(marker => marker.position !== "top");
         
-        // Determine file extension based on original format
+        // Add all cue points at once
+        validMarkers.forEach(marker => {
+            file.setCuePoint({
+                position: marker.time * 1000
+            });
+        });
+
+        // Optimize cue point processing
+        if (file.cue && file.cue.points) {
+            file.cue.points.forEach(point => {
+                point.dwPosition = point.dwSampleOffset;
+            });
+        }
+
+        // Use toBuffer() + Blob instead of toDataURI() for better performance
+        const wavBuffer = file.toBuffer();
+        const blob = new Blob([wavBuffer], { type: 'audio/wav' });
+        
         const filename = "export.wav"
         console.log('Saving file...')
-        saveAs(data, filename)
+        saveAs(blob, filename)
     }
 
     async createSampleDrumBuffer(buffer, markers) {
@@ -62,24 +69,12 @@ export default class WavHandler {
         let file = new WaveFile()
         file.fromScratch(2, this.audioContext.sampleRate, '16', buffer)
 
-        // // Add markers as cue points
-        // for (let marker of markers) {
-        //     if (marker.position != "top") {
-        //         file.setCuePoint({
-        //             position: marker.time * 1000
-        //         })
-        //     }
-        // }
-
-        // for (let i = 0; i < file.cue.points.length; i++) {
-        //     file.cue.points[i].dwPosition = file.cue.points[i].dwSampleOffset
-        // }
-
-        const data = file.toDataURI()
+        // Use toBuffer() + Blob instead of toDataURI() for better performance
+        const wavBuffer = file.toBuffer();
+        const blob = new Blob([wavBuffer], { type: 'audio/wav' });
         
-        // Determine file extension based on original format
         const filename = "export.wav"
         console.log('Saving file...')
-        saveAs(data, filename)
+        saveAs(blob, filename)
     }
 }

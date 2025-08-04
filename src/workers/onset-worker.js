@@ -214,12 +214,14 @@ async function computeOnsets() {
         return new Float32Array(0);
     } else {
         const positions = essentia.vectorToArray(onsetPositions).map(pos => Math.max(0, pos));
+
+        console.log(positions);
         
-        const firstOnset = positions[0];
-        const nearZeroThreshold = 2; // Consider onsets within 2 frames as "near zero"
-        if (firstOnset > nearZeroThreshold) {
-            positions.unshift(0);
-        }
+        // const firstOnset = positions[0];
+        // const nearZeroThreshold = 2; // Consider onsets within 2 frames as "near zero"
+        // if (firstOnset > nearZeroThreshold) {
+        //     positions.unshift(0);
+        // }
         
         return positions.map(pos => Math.max(0, pos));
     }
@@ -310,13 +312,21 @@ self.onmessage = async function(e) {
                 self.signal = audioData;
                 self.params.sampleRate = sampleRate;
 
+                // Invalidate all caches when new audio is loaded
+                self.cachedPolarFrames = null;
+                self.cachedOdfMatrix = null;
+
                 await computeFFT();
                 const onsets = await computeOnsets();
-                const bpm = computeBPM();
+                console.log('onsets computed')
+
+                console.log(onsets);
+
+                console.log('posting message')
                 
                 self.postMessage({ 
                     onsets: onsets,
-                    bpm: bpm,
+                    bpm: 0,
                     success: true 
                 });
                 break;

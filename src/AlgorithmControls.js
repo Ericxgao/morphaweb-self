@@ -15,7 +15,7 @@ export default class AlgorithmControls {
             label: 'Frame Size',
             min: 512,
             max: 8192,
-            value: 2048,
+            value: 1024,
             step: 512
         });
 

@@ -45,8 +45,8 @@ export default class AlgorithmControls {
             label: 'ODF Ratio',
             min: 0,
             max: 100,
-            value: 50,
-            step: 10,
+            value: 85,
+            step: 5,
             helpText: 'Higher values improve detection for percussive elements, lower values improve detection for pitch changes'
         });
 
@@ -158,7 +158,14 @@ export default class AlgorithmControls {
     }
 
     initializeDefaultValues() {
-        // Set initial values
-        this.handleSliderChange();
+        // Set initial values - use setTimeout to ensure DOM elements are ready
+        setTimeout(() => {
+            const odfRatioElement = document.getElementById('odf-ratio');
+            if (odfRatioElement) {
+                this.handleSliderChange();
+            } else {
+                console.error('ODF Ratio slider not found in DOM');
+            }
+        }, 0);
     }
 } 

@@ -212,10 +212,12 @@ export default class WavHandler {
         // Use fast export with 16-bit format for smaller file size
         const format = {
             sampleRate: this.audioContext.sampleRate,
-            bitDepth: 16,
+            bitDepth: 32,
             channels: 'stereo',
-            format: 'int'
+            format: 'float'
         };
+
+        console.log(format)
         
         const arrayBuffer = this.audioBufferToWavFormat(buffer, format, markerTimes);
         
@@ -230,9 +232,9 @@ export default class WavHandler {
         // Use fast export with 16-bit format (no markers for drum export)
         const format = {
             sampleRate: this.audioContext.sampleRate,
-            bitDepth: 16,
+            bitDepth: 32,
             channels: 'stereo',
-            format: 'int'
+            format: 'float'
         };
         
         const arrayBuffer = this.audioBufferToWavFormat(buffer, format, []);

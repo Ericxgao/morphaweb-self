@@ -8,8 +8,8 @@ let essentia = null;
 // Initialize parameters
 self.allowedParams = ['sampleRate', 'frameSize', 'hopSize', 'odfs', 'odfsWeights', 'sensitivity'];
 self.params = {
-    frameSize: 2048,
-    hopSize: Math.floor(2048 * 0.25), // 25% of frameSize = 512
+    frameSize: 1024,
+    hopSize: Math.floor(1024 * 0.25), // 25% of frameSize = 512
     sampleRate: 44100,
     sensitivity: 0.1, // 10% sensitivity
     odfs: ['hfc', 'complex'],

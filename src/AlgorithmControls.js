@@ -15,7 +15,7 @@ export default class AlgorithmControls {
             label: 'Frame Size',
             min: 512,
             max: 8192,
-            value: 1024,
+            value: 512,
             step: 512
         });
 
@@ -35,7 +35,7 @@ export default class AlgorithmControls {
             label: 'Sensitivity %',
             min: 1,
             max: 100,
-            value: 50,
+            value: 65,
             step: 1
         });
 
